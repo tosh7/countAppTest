@@ -9,17 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var num:Int
+    @IBOutlet weak var label:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    @IBAction func plus(){
+        num = num + 1
+        label.text = num
+    }
+    
+    @IBAction func minus(){
+        num = num - 1
+        label.text = num
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet func clear(){
+        num = 0
+        label.text = num
     }
-
-
+    
+    func check(){
+        if num >= 10 {
+            //赤色に変えてみよう
+            
+        }else if num <= -10{
+            //青色に変えてみよう
+            
+        }else{
+            //黒に戻してみよう
+            
+        }
+    }
 }
 
